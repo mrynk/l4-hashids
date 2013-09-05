@@ -1,0 +1,48 @@
+<?php namespace Mrynk\L4Hashids;
+
+use Illuminate\Support\ServiceProvider;
+use Hashids\Hashids;
+
+class L4HashidsServiceProvider extends ServiceProvider {
+
+	/**
+	 * Indicates if loading of the provider is deferred.
+	 *
+	 * @var bool
+	 */
+	protected $defer = false;
+
+	/**
+	 * Bootstrap the application events.
+	 *
+	 * @return void
+	 */
+	public function boot()
+	{
+		$this->package('mrynk/l4-hashids');
+	}
+
+	/**
+	 * Register the service provider.
+	 *
+	 * @return void
+	 */
+	public function register()
+	{
+		$this->app['hashids'] = $this->app->share(function( $app )
+		{
+			return new Hashids( $app['config']->get('l4-hashids::salt'), $app['config']->get('l4-hashids::min_length') );
+		});
+	}
+
+	/**
+	 * Get the services provided by the provider.
+	 *
+	 * @return array
+	 */
+	public function provides()
+	{
+		return array('hashids');
+	}
+
+}

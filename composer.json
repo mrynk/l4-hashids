@@ -1,0 +1,26 @@
+{
+    "name": "mrynk/l4-hashids",
+    "description": "A Laravel 4 package for the official hashids library",
+    "keywords": [ "laravel", "hashids", "mrynk" ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michel Ypma",
+            "email": "michel@mrynk.nl"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x",
+        "hashids/hashids": "0.3.*@dev"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Mrynk\\L4Hashids": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
