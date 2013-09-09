@@ -32,7 +32,7 @@ L4-Hashids's configuration file can be extended by creating `app/config/packages
 You can quickly publish a configuration file by running the following Artisan command.
 
 ```
-$ php artisan config:publish mrynk/lf-hashids
+$ php artisan config:publish mrynk/l4-hashids
 ```
 
 Usage
