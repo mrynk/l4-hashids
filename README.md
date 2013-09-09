@@ -11,7 +11,7 @@ Add `mrynk\l4-hashids` as a requirement to composer.json:
 ```javascript
 {
     "require": {
-        "mrynk/l4-hashids": "dev-master"
+        "mrynk/l4-hashids": "master"
     }
 }
 ```
@@ -32,7 +32,7 @@ L4-Hashids's configuration file can be extended by creating `app/config/packages
 You can quickly publish a configuration file by running the following Artisan command.
 
 ```
-$ php artisan config:publish rcrowe/twigbridge
+$ php artisan config:publish mrynk/lf-hashids
 ```
 
 Usage
