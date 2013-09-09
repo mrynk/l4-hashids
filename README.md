@@ -11,7 +11,7 @@ Add `mrynk\l4-hashids` as a requirement to composer.json:
 ```javascript
 {
     "require": {
-        "rcrowe/twigbridge": "0.5.*"
+        "mrynk/l4-hashids": "dev-master"
     }
 }
 ```
