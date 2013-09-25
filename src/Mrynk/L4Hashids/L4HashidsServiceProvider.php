@@ -31,7 +31,11 @@ class L4HashidsServiceProvider extends ServiceProvider {
 	{
 		$this->app['hashids'] = $this->app->share(function( $app )
 		{
-			return new Hashids( $app['config']->get('l4-hashids::salt'), $app['config']->get('l4-hashids::min_length') );
+			return new Hashids(
+				$app['config']->get('l4-hashids::salt', $app['config']->get('app.key') ),
+				$app['config']->get('l4-hashids::min_length', 6 ),
+				$app['config']->get('l4-hashids::alphabet', false )
+			);
 		});
 	}
 

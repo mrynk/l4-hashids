@@ -2,8 +2,13 @@
 
 return array(
 
-	'salt' => 'salt_between_6_and_32_characters',
+	# create a salt for use. When left empty, app.key is used
+	//'salt' => false,
 
-	'min_length' => 6,
+	# minimum length of hashes. Default 6
+	//'min_length' => 6,
+
+	#define the used alphabet, leave blank or false for deafult alphabet
+	//'alphabet' => false,
 
 );
