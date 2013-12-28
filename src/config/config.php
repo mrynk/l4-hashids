@@ -8,7 +8,7 @@ return array(
 	# minimum length of hashes. Default 6
 	//'min_length' => 6,
 
-	#define the used alphabet, leave blank or false for deafult alphabet
+	# define the used alphabet, leave blank or false for default alphabet
 	//'alphabet' => false,
 
 );
