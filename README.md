@@ -21,7 +21,7 @@ Update your packages with `composer update` or install with `composer install`.
 Once Composer has installed or updated your packages you need to register Hashids with Laravel itself. Open up app/config/app.php and find the providers key towards the bottom and add:
 
 ```php
-'Mrynk\L4HashidsServiceProvider'
+'Mrynk\L4Hashids\L4HashidsServiceProvider'
 ```
 
 Configuration
