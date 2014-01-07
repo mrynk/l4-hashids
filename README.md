@@ -45,7 +45,7 @@ Use it in your controller like:
 public function myAction( $pHash )
 {
 	$id = Hashids::decrypt( $pHash );
-	Model::find( $pHash );
+	Model::find( $id );
 }
 ```
 
