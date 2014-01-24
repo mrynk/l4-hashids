@@ -11,4 +11,13 @@ return array(
 	# define the used alphabet, leave blank or false for default alphabet
 	//'alphabet' => false,
 
+	#define specific named settings
+	/*'named' => array(
+		'users' => array(
+			'salt' => 'other_salt',
+			'min_length' => 7,
+			'alphabet' => '0123456789_',
+			'allow_multiple' => false
+		)
+	)*/
 );
