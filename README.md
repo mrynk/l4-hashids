@@ -49,7 +49,7 @@ public function myAction( $pHash )
 }
 ```
 
-Since v2.0 you can define different setting groups. Obviously default is the deafult group. To use another you can explicitly tell so:
+Since v2.0 you can define different setting groups. Obviously default is the default group. To use another you can explicitly tell so:
 
 Use it in your controller like:
 ```php
