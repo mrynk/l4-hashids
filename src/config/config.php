@@ -2,22 +2,17 @@
 
 return array(
 
-	# create a salt for use. When left empty, app.key is used
-	//'salt' => false,
-
-	# minimum length of hashes. Default 6
-	//'min_length' => 6,
-
-	# define the used alphabet, leave blank or false for default alphabet
-	//'alphabet' => false,
-
-	#define specific named settings
-	/*'named' => array(
-		'users' => array(
-			'salt' => 'other_salt',
+	'groups' => array(
+		'default' => array(
+			'salt' => 'salt_must_be_a_minimum_of_16',
 			'min_length' => 7,
-			'alphabet' => '0123456789_',
-			'allow_multiple' => false
+			'alphabet' => '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+		),
+		#define specific named settings
+		'named' => array(
+			'salt' => 'salt_must_be_a_minimum_of_16',
+			'min_length' => 10,
+			'alphabet' => '0123456789abcdefghijklmnopqrstuvwxyz'
 		)
-	)*/
+	)
 );

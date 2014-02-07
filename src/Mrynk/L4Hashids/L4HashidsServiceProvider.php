@@ -1,7 +1,6 @@
 <?php namespace Mrynk\L4Hashids;
 
 use Illuminate\Support\ServiceProvider;
-use Hashids\Hashids;
 
 class L4HashidsServiceProvider extends ServiceProvider {
 
@@ -31,10 +30,12 @@ class L4HashidsServiceProvider extends ServiceProvider {
 	{
 		$this->app['hashids'] = $this->app->share(function( $app )
 		{
-			return new Hashids(
-				$app['config']->get('l4-hashids::salt', $app['config']->get('app.key') ),
+			//var_dump( $app['config']->get('l4-hashids::') );
+			//die();
+			return new L4Hashids( $app['config']
+				/*$app['config']->get('l4-hashids::salt', $app['config']->get('app.key') ),
 				$app['config']->get('l4-hashids::min_length', 6 ),
-				$app['config']->get('l4-hashids::alphabet', false )
+				$app['config']->get('l4-hashids::alphabet', false )*/
 			);
 		});
 	}
