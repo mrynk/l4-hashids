@@ -45,7 +45,18 @@ Use it in your controller like:
 public function myAction( $pHash )
 {
 	$id = Hashids::decrypt( $pHash );
-	Model::find( $id );
+	Model::find( reset( $id ) );
+}
+```
+
+Since v2.0 you can define different setting groups. Obviously default is the deafult group. To use another you can explicitly tell so:
+
+Use it in your controller like:
+```php
+public function myAction( $pHash )
+{
+	$id = Hashids::make('groupname')->decrypt( $pHash );
+	Model::find( reset( $id ) );
 }
 ```
 
